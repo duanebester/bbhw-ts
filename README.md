@@ -1,6 +1,12 @@
+# BeagleBone Black Hardware
+
+Support for I2C, GPIO, and PWM on the BBB with TypeScript.
+
 ### Setup
 
 Need to have [i2c-bus](https://github.com/fivdi/i2c-bus) library installed in your `NODE_PATH` on the beaglebone black.
+
+> Note that i2c-bus supports Node.js versions 10, 12, 14, 16, 18 and 20.
 
 ```bash
 sudo apt-get install nodejs npm
@@ -41,7 +47,7 @@ let userButton = new GPIO(72, Direction.IN)
 let i2cDevice1 = new I2C(1)
 let pwm = new PWM("P9_22")
 
-// Set PWM 
+// Set PWM
 pwm.setPwmFrequencyAndValue({ frequency: 5000, value: 0.75 })
 
 // GPIO in/out
