@@ -2,6 +2,8 @@
 
 Support for I2C, GPIO, and PWM on the BBB with TypeScript.
 
+[![NPM](https://nodei.co/npm/bbhw-ts.png)](https://nodei.co/npm/bbhw-ts/)
+
 ### Setup
 
 Need to have [i2c-bus](https://github.com/fivdi/i2c-bus) library installed in your `NODE_PATH` on the beaglebone black.
