@@ -8,7 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "author": "",
+  "repository": {
+    "url": "https://github.com/duanebester/bbhw-ts"
+  },
+  "author": "Duane Bester <bester.duane@gmail.com>",
   "license": "ISC",
   "description": "",
   "devDependencies": {
