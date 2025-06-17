@@ -6,15 +6,9 @@ Support for I2C, GPIO, and PWM on the BBB with TypeScript.
 
 ### Setup
 
-Need to have [i2c-bus](https://github.com/fivdi/i2c-bus) library installed in your `NODE_PATH` on the beaglebone black.
+Note, uses [i2c-bus](https://github.com/fivdi/i2c-bus) library.
 
 > Note that i2c-bus supports Node.js versions 10, 12, 14, 16, 18 and 20.
-
-```bash
-sudo apt-get install nodejs npm
-export NODE_PATH=/usr/local/lib/node_modules
-npm i i2c-bus
-```
 
 Need to have pins configured in their respective modes before using...
 
@@ -23,6 +17,7 @@ Example:
 #!/bin/sh
 config-pin P9_11 gpio
 config-pin P9_13 gpio
+config-pin P8_43 gpio
 config-pin P9_17 i2c
 config-pin P9_18 i2c
 config-pin P9_19 i2c
@@ -36,16 +31,13 @@ sudo hwclock -w -f /dev/rtc1
 ### Example program
 
 ```ts
-import { Direction, GPIO } from "bbhw-ts"
-import { I2C } from "bbhw-ts"
-import { PWM } from "bbhw-ts"
-import { msleep } from "bbhw-ts"
+import { Direction, GPIO, I2C, PWM, msleep } from "bbhw-ts"
 
-export const POWERMON_ADDR = 0x21
-export const MAX11614_ADDR = 0x33
+const POWERMON_ADDR = 0x21
+const MAX11614_ADDR = 0x33
 
 let gpioLED = new GPIO(60, Direction.OUT)
-let userButton = new GPIO(72, Direction.IN)
+let userButton = new GPIO(72, Direction.IN) // corresponds to P8_43
 let i2cDevice1 = new I2C(1)
 let pwm = new PWM("P9_22")
 
