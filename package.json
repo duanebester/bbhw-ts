@@ -1,25 +1,25 @@
 {
-  "name": "bbhw-ts",
-  "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc --module commonjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "type": "module",
-  "repository": {
-    "url": "https://github.com/duanebester/bbhw-ts"
-  },
-  "author": "Duane Bester <bester.duane@gmail.com>",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "@types/i2c-bus": "^5.1.2",
-    "@types/node": "^20.14.2",
-    "typescript": "^5.4.5"
-  },
-  "dependencies": {
-    "i2c-bus": "^5.2.3"
-  }
+	"name": "bbhw-ts",
+	"version": "1.0.4",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"type": "module",
+	"repository": {
+		"url": "https://github.com/duanebester/bbhw-ts"
+	},
+	"author": "Duane Bester <bester.duane@gmail.com>",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@types/i2c-bus": "^5.1.2",
+		"@types/node": "^20.14.2",
+		"typescript": "^5.4.5"
+	},
+	"dependencies": {
+		"i2c-bus": "^5.2.3"
+	}
 }

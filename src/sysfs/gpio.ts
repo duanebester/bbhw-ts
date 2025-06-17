@@ -1,5 +1,5 @@
-import { readFileSync, existsSync, writeFileSync } from "node:fs";
-import { msleep } from "../utils/utils";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { msleep } from "../utils/utils.js";
 
 export enum Direction {
 	IN = "in",

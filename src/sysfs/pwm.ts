@@ -6,7 +6,7 @@ import {
 	writeFileSync,
 } from "node:fs";
 import { join } from "node:path";
-import { msleep } from "../utils/utils";
+import { msleep } from "../utils/utils.js";
 
 export type PwmChip = {
 	chip: number;
