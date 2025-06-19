@@ -89,6 +89,10 @@ export class PWM {
 		}
 	}
 
+	isEnabled() {
+		return readFileSync(join(this.pwmPath, "enable")).toString().trim() === "1";
+	}
+
 	enable() {
 		writeFileSync(join(this.pwmPath, "enable"), "1");
 	}
@@ -107,8 +111,8 @@ export class PWM {
 	setPwmFrequencyAndValue({ frequency, value }: PwmFreqValue) {
 		const period = Math.round(1.0e9 / frequency); // period in ns
 		const duty = Math.round(period * value);
-		writeFileSync(join(this.pwmPath, "period"), period.toString());
 		writeFileSync(join(this.pwmPath, "duty_cycle"), "0");
+		writeFileSync(join(this.pwmPath, "period"), period.toString());
 		writeFileSync(join(this.pwmPath, "duty_cycle"), duty.toString());
 	}
 
